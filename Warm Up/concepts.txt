@@ -1,0 +1,34 @@
+1. Pass By Value vs Pass By Reference?
+=> https://www.geeksforgeeks.org/javascript/pass-by-value-and-pass-by-reference-in-javascript/
+
+***Does JavaScript Truly Support "Pass by Reference"?
+=> JavaScript does not have "true pass by reference." Instead:
+
+   Primitive types (like numbers, strings, booleans) are always passed by value—a copy of the value is passed.
+   For objects and arrays, JavaScript passes the reference value, which is essentially a pointer to the memory 
+   location of the data. This allows modifications to the object or array but does not allow reassigning the 
+   original variable within the function.
+
+
+2. What is Time and Space complexity? How to calculate in code snippets?
+=> Time Complexity: The time complexity of an algorithm quantifies the amount of time taken by an algorithm to run 
+   as a function of the length of the input. Note that the time to run is a function of the length of the input and not 
+   the actual execution time of the machine on which the algorithm is running on.
+
+   To estimate the time complexity, we need to consider the cost of each fundamental instruction and the number of times 
+   the instruction is executed.
+
+   Space Complexity: The space complexity of an algorithm quantifies the amount of space taken by an algorithm to run as a 
+   function of the length of the input.
+
+   To estimate the memory requirement we need to focus on two parts: 
+
+   (1) A fixed part: It is independent of the input size. It includes memory for instructions, constants, variables, etc.
+
+   (2) A variable part: It is dependent on the input size. It includes memory for recursion stack, referenced variables, etc.
+
+   There is also auxiliary space, which is different from space complexity. The main difference is where space complexity 
+   quantifies the total space used by the algorithm, auxiliary space quantifies the extra space that is used in the 
+   algorithm apart from the given input.
+
+   Reference: https://www.geeksforgeeks.org/dsa/time-complexity-and-space-complexity/

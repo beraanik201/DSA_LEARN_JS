@@ -1,0 +1,4 @@
+1. Run the outer loop, count the number of lines(rows).
+2. Run the inner loop, focus on the columns, connect them somewhere to the rows.
+3. Print them (eg.*) inside the inner loop.
+4. Observe Symmetry (optional).
