@@ -1,0 +1,27 @@
+Q. Explain Time and Space Complexity with examples.
+=> Time Complexity:
+   Time complexity is a measure of the amount of time an algorithm takes to complete as a function of the length of the input. It helps in analyzing the efficiency of an algorithm.
+   Example:
+    Consider a simple loop that runs 'n' times:
+    ```
+    function printNumbers(n) {
+        for (let i = 0; i < n; i++) {
+            console.log(i);
+        }
+    }
+    ```
+    The time complexity of this function is O(n) because the loop runs 'n' times, and the time taken grows linearly with the input size.
+=> Space Complexity:
+   Space complexity is a measure of the amount of memory an algorithm uses as a function of the length of the input. It helps in analyzing the memory efficiency of an algorithm.
+   Example:
+    Consider a function that creates an array of size 'n':
+    ```
+    function createArray(n) {
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            arr.push(i);
+        }
+        return arr;
+    }
+    ```
+    The space complexity of this function is O(n) because it creates an array that grows linearly with the input size.
