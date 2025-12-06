@@ -888,4 +888,133 @@ It helps avoid repetitive access like obj.name, arr[0], etc.
     }
     chai()
 
-52. 
+52. What is Arrow function? Implicit return in Arrow function.
+=>  Arrow functions are a shorter function syntax in JavaScript that use lexical this and are ideal for callbacks and 
+    functional programming
+
+    Example:
+    const add = (a, b) => {
+    return a + b;
+    };
+
+    If an arrow function contains a single expression, it can return the value automatically without using the return keyword
+
+    Example:
+    const add = (a, b) => a + b;
+
+53. What is Immediately invoked function expressions(IIFE)?
+=>  An IIFE is a function that runs immediately when defined, mainly used to create a private scope and avoid global variable pollution.
+
+    Example:
+    (function chai(){
+    console.log(`DB Connected`)
+    })();
+
+54. Explain Javascript Execution Context.
+=>  The Execution Context is the environment in which JavaScript code is evaluated and executed.
+    It defines what variables, functions, and objects are accessible at a given point in the code.
+
+    JavaScript has two types of execution contexts:
+
+    i> Global Execution Context (GEC)
+    ii> Function Execution Context (FEC)
+    (Each time a function is called, a new FEC is created)
+
+    🚀 Phases of Execution Context:
+    1️⃣ Creation Phase (Memory Allocation Phase)
+
+    2️⃣ Execution Phase (Code Execution Phase)
+
+55. function one(){
+    console.log("one called")
+    two()
+    }
+    function two(){
+    console.log("two called")
+    }
+    one()
+    two()
+
+    What will be the output?
+
+56. In a switch case statement if any case is matched and there is no break, all cases will execute after the match case except default.
+    
+57. truthy value
+
+    Example:
+    ("0", 'false', " ", [], {}, function(){})
+
+    falsy value
+
+    Example:
+    (0, -0, false, BigInt 0n, NaN, undefined, null, "")
+
+58. How to check an object is empty or not?
+=>  
+    Example:
+    const obj = {};
+    if (Object.keys(obj).length === 0) {
+    console.log("Object is empty");
+    }
+
+59. What is the Nullish Coalescing Operator (??) in JavaScript?
+=>  The nullish coalescing operator (??) returns the right-hand value only when the left-hand value is null or undefined.
+    It is used to provide safe fallback/default values.
+
+    Example:
+    let result = value1 ?? value2;
+    If value1 is null or undefined → return value2
+    Otherwise → return value1
+
+60. what are Higher order functions?
+=>  A higher-order function is a function that either accepts another function as an argument or returns a function.
+
+    ✔ Why do we use HOFs?
+    Make code more modular
+    Enable functional programming
+    Allow callbacks
+    Useful for array methods, event handling, async programming
+
+    1️⃣ Function taking another function (callback)
+
+    Example:
+    function greet(name) {
+    console.log("Hello " + name);
+    }
+
+    function processUserInput(callback) {
+    callback("Anik");
+    }
+
+    processUserInput(greet);
+
+    processUserInput → HOF
+    greet → callback function
+
+    2️⃣ Function returning another function
+
+    Example:
+    function multiply(x) {
+    return function (y) {
+        return x * y;
+    }
+    }
+
+    const double = multiply(2);
+    console.log(double(5)); // 10
+
+    multiply → HOF (returns another function)
+
+    ✔ Array methods are HOFs
+    Because they accept functions as arguments:
+
+    Example:
+    [1,2,3].map(num => num * 2);
+
+    Example:
+    [1,2,3].filter(num => num > 1);
+
+    Example:
+    [1,2,3].reduce((acc, curr) => acc + curr, 0);
+
+
