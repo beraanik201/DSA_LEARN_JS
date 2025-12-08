@@ -888,4 +888,121 @@ It helps avoid repetitive access like obj.name, arr[0], etc.
     }
     chai()
 
-52. 
+52. What is Arrow function? Implicit return in Arrow function.
+=>  Arrow functions are a shorter and cleaner way to write functions in JavaScript, introduced in ES6. 
+    They use the => syntax and do not have their own this, arguments, super, or new.target, making them ideal 
+    for callbacks and functional programming patterns.
+
+    Example:
+    const add = (a, b) => a + b;
+
+    Arrow functions support implicit return, which means:
+    If the function body contains a single expression and you don’t use {}, that expression is automatically returned. No return keyword needed.
+
+    Example:
+    const add = (a, b) => a + b;          // implicit return
+
+    Example:
+    const double = n => n * 2;            // single expression
+
+    Example:
+    const add = (a, b) => { return a + b; };  // explicit return required
+
+53. What is IIFE (Immediately Invoked Function Expression)?
+=>  An IIFE is a function in JavaScript that is defined and executed immediately at the same time.
+    Its main purpose is to create a private scope and avoid polluting the global namespace.
+
+    Example:
+    (function () {
+    console.log("IIFE runs immediately");
+    })();
+
+54. What is Javascript Execution Context?
+=>  Execution Context is the environment in which JavaScript code is evaluated and executed.
+    It decides what variables, functions, and this value are accessible at any point.
+
+    Types of Execution Context
+
+    Example:
+    i> Global Execution Context (GEC)
+    Created when JS file starts.
+    Creates global object (window in browser).
+    Sets this to global object.
+    Only one GEC in a program.
+
+    Example:
+    ii>Function Execution Context (FEC)
+    Created every time a function is invoked.
+    Has its own local variables, arguments, and new this value.
+    Eval Execution Context (rare, not used generally)
+
+    Phases of Execution Context
+    Each context goes through 2 phases:
+
+    Example:
+    1. Creation Phase (Memory Creation Phase / Hoisting Phase)
+    Allocates memory for:
+    Variables → initialized with undefined
+    Functions → full function stored
+    Sets up:
+    this binding
+    Lexical Environment
+    Variable Environment
+
+    Example:
+    2. Execution Phase
+    Code runs line by line.
+    Variables get assigned actual values.
+    Functions get executed.
+    Call Stack
+    JS is single-threaded → uses call stack.
+    When a function is called → new Execution Context pushed.
+    When function finishes → popped.
+
+55. function one(){
+    console.log("one called");
+    two();
+    }
+    function two(){
+        console.log("two called");
+    }
+    one();
+    two();
+    what will be the output?
+
+56. In a switch case statement if any case is matched and there no break all cases will be executed after the match except default.
+
+57. truthy value - ("0", 'false', " ", [], {}, function(){})
+
+58. falsy value - (0, -0, false, BigInt 0n, NaN, undefined, null,"")
+
+59. How to check an object is empty or not?
+=>  Object.keys(objectName).length===0
+
+60. what is Nullish Coalescing Operator (??)
+=>  The nullish coalescing operator (??) returns the right-hand value only when the left-hand value is null or undefined.
+
+    Example:
+    let result = value1 ?? value2;
+
+    If value1 is null or undefined → return value2
+    Otherwise → return value1
+
+61. What are Higher Order Functions?
+=>  A function is called a Higher Order Function if it accepts another function as an argument, returns a function, or does both.
+
+    Example:
+    function greet(fn) {
+    return fn();     // taking a function
+    }
+
+    function multiplier(a) {
+    return function(b) {   // returning a function
+        return a * b;
+    }
+    }
+
+    Example:
+    map, filter,reduce
+
+61. 
